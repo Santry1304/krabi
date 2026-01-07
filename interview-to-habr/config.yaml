@@ -1,0 +1,27 @@
+# Interview-to-Habr Pipeline Configuration
+
+# Gemini API Settings
+gemini:
+  default_model: "gemini-2.0-flash-exp"
+  temperature: 0.7
+  max_retries: 3
+  retry_delay: 5  # seconds
+
+# Paths
+paths:
+  projects_dir: "./projects"
+  prompts_dir: "./prompts"
+
+# Editor
+editor:
+  external: "${EDITOR}"  # Falls back to $EDITOR environment variable
+
+# UI Settings
+ui:
+  theme: "dark"
+  show_line_numbers: true
+
+# Pipeline Settings
+pipeline:
+  auto_save: true
+  checkpoint_enabled: true
