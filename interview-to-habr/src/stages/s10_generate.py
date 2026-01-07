@@ -59,13 +59,7 @@ class GenerateStage(BaseStage):
 """
 
             # Call LLM with material-specific prompt
-            result = self.call_llm(
-                content,
-                extra_context={"material_type": material_info["name"]}
-            )
-
-            # Use the prompt from materials/ directory
-            # Note: stage_name should be set to the prompt file path
+            # Temporarily override stage_name to load correct prompt
             original_stage_name = self.stage_name
             self.stage_name = material_info["prompt_file"]
 

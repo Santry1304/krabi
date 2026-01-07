@@ -198,9 +198,6 @@ class Pipeline:
         results = []
 
         for stage_num in range(from_stage, to_stage + 1):
-            # Check if already completed
-            status = self.state_manager.get_stage_status(f"{stage_num}_*")
-
             # Run stage
             result = self.run_stage(stage_num, **kwargs)
             results.append(result)
